@@ -3,6 +3,7 @@ import { getCountryData } from "../api/postApi";
 import { Loader } from "../components/UI/Loader";
 import CountryCard from "../components/Layout/CountryCard";
 import SearchFilter from "../components/UI/SearchFilter";
+import Pagination from "../components/UI/Pagination";
 
 export const Country = () => {
   const [isPending, startTransition] = useTransition();
@@ -10,30 +11,17 @@ export const Country = () => {
 
   const [search, setSearch] = useState();
   const [filter, setFilter] = useState("all");
-
-  //USUAL METHOD
-  // useEffect(async () => {
-  //   const res = await fetch(
-  //     "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags"
-  //   );
-
-  //   const data = res.json();
-  //   setData(data);
-  // }, []);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   useEffect(() => {
     startTransition(async () => {
       const res = await getCountryData();
-      // console.log(res);
       setCountries(res.data);
     });
   }, []);
 
   if (isPending) return <Loader />;
-
-  //console.log(search, filter);
-
-  //Logic for Search Functionality and Filter Functionality
 
   const searchCountry = (country) => {
     if (search) {
@@ -51,6 +39,10 @@ export const Country = () => {
     (country) => searchCountry(country) && filterRegion(country)
   );
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filterCountries.slice(indexOfFirstItem, indexOfLastItem);
+
   return (
     <section className="country-section">
       <SearchFilter
@@ -62,10 +54,17 @@ export const Country = () => {
         setCountries={setCountries}
       />
       <ul className="grid grid-four-cols">
-        {filterCountries.map((curCountry) => {
+        {currentItems.map((curCountry) => {
           return <CountryCard country={curCountry} key={curCountry.id} />;
         })}
       </ul>
+      <Pagination
+        totalItems={filterCountries.length}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        displayPageNumbers={3} // Only show Prev 1 2 3 Next
+      />
     </section>
   );
 };
