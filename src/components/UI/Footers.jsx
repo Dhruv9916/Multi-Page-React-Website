@@ -33,10 +33,10 @@ export const Footers = () => {
           <div className="grid grid-two-cols">
             <div className="copyright-text">
               <p>
-                Copyright &copy; 2024, All Right Reserved
-                <NavLink to="https://thapatechnical.shop/" target="_blank">
+                Copyright &copy; 2025, All Right Reserved
+                {/* <NavLink to="https://thapatechnical.shop/" target="_blank">
                   ThapaTechnical
-                </NavLink>
+                </NavLink> */}
               </p>
             </div>
 
