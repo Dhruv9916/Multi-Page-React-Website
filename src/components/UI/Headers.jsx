@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+
 export const Headers = () => {
   return (
     <>
@@ -28,6 +29,8 @@ export const Headers = () => {
                 </li>
               </ul>
             </nav>
+
+
           </div>
         </div>
       </header>
