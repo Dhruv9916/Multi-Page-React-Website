@@ -1,11 +1,8 @@
 🌍 WorldAtlas - React 19 Multi-Page Website
 
-  
-
 🚀 Overview
 
 WorldAtlas is a dynamic and responsive multi-page website built using React 19. It features Dynamic Routing, React Router DOM for seamless navigation, Axios for API requests, and includes advanced features like search, filter, and sorting functionalities. The project follows best practices for building modern web applications with React.
-WorldAtlas is a dynamic and responsive multi-page website built using React 19. It utilizes React Router DOM for seamless navigation, Axios for API requests, and includes advanced features like search, filter, and sorting functionalities. The project follows best practices for building modern web applications with React.
 
 🔗 Live Demo: WorldAtlas
 
@@ -106,4 +103,3 @@ Contributions are welcome! Feel free to fork this repo and submit a PR.
 📩 Contact
 
 For any inquiries, reach out at dhruvkumar182003@gmail.com or connect via LinkedIn.
-
