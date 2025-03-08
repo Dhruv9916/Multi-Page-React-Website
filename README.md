@@ -16,6 +16,7 @@ WorldAtlas is a dynamic and responsive multi-page website built using React 19. 
 *   ✅ 🎨 **Fully Responsive Design** – Optimized for all devices
 *   ✅ 🚀 **Deployed on Netlify** – Easily accessible online
 *   ✅ ⚠️ **Error Handling & Loaders** – Smooth user experience
+*   ✅     **Pagination Feature** – Smooth user experience
 
 🚀 Deployment
 
