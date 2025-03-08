@@ -32,6 +32,14 @@ function SearchFilter({
         placeholder="search"
         value={search}
         onChange={handleInputChange}
+        style={{
+          padding: "10px",
+          borderRadius: "5px",
+          border: "1px solid #ccc",
+          width: "100%",
+          maxWidth: "300px",
+          marginBottom: "10px",
+        }}
       />
 
       <div>

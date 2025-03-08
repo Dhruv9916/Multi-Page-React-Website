@@ -2,16 +2,16 @@
   {
     "icon": "MdPlace",
     "title": "Find us",
-    "details": "Pune, Maharashtra"
+    "details": "Greater Noida, Uttar Pradesh "
   },
   {
     "icon": "IoCallSharp",
-    "title": "Call us",
-    "details": "9876543211"
+    "title": "Contact us",
+    "details": "https://www.linkedin.com/in/dhruv-kumar-29b279230/"
   },
   {
     "icon": "TbMailPlus",
     "title": "Mail us",
-    "details": "contact@kodyfier.com"
+    "details": "dhruvkumar182003@gmail.com"
   }
 ]

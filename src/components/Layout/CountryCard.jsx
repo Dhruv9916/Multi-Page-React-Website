@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function CountryCard({ country }) {
   const { flags, name, population, region, capital } = country;
   return (
-    <li className="country-card card ">
+    <li className="country-card card " style={{ minWidth: "130px" }}>
       <div className="container-card bg-white-box">
         <img src={flags.svg} alt={flags.alt} />
         <div className="countryInfo">
